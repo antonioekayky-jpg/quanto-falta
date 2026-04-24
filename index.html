@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quanto Falta?</title>
+
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- CSS externo -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="card">
+
+  <h1>Quanto Falta?</h1>
+
+  <div class="field">
+    <label for="poupancaMensal">
+      Quanto você consegue guardar por mês (R$)
+      <span class="label-hint">— só o que sobra de verdade</span>
+    </label>
+
+    <input 
+      type="number" 
+      id="poupancaMensal" 
+      placeholder="Ex: 400" 
+      min="1" 
+      step="1">
+  </div>
+
+  <div class="field">
+    <label for="objetivo">Seu objetivo</label>
+
+    <input 
+      type="text" 
+      id="objetivo" 
+      placeholder="Ex: comprar um celta, quero um iphone15...">
+  </div>
+
+  <button 
+    type="button" 
+    onclick="Estimar()">
+
+    Calcular tempo
+
+  </button>
+
+  <div id="erro"></div>
+  <div id="resultado"></div>
+  <div id="listaObjetivos"></div>
+
+</div>
+
+<!-- Firebase  -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<!--  Firebase config -->
+<script src="firebase-config.js"></script>
+
+<!-- script principal -->
+<script src="script.js"></script>
+</body>
+
+</html>
